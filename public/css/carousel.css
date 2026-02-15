@@ -1,0 +1,56 @@
+.photo-carousel {
+  text-align: center;
+  margin: 40px auto;
+  max-width: 400px; /* ancho del carrusel */
+  font-family: "Yu Mincho", serif;
+  color: #b03060;
+  position: relative;
+}
+
+.carousel-container {
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 182, 193, 0.3);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-track img {
+  min-width: 100%; /* una imagen visible a la vez */
+  height: 250px;   /* ajusta según prefieras */
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 182, 193, 0.3);
+  cursor: pointer;
+}
+
+.photo-carousel button.prev,
+.photo-carousel button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #b03060;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background 0.3s;
+}
+
+.photo-carousel button.prev:hover,
+.photo-carousel button.next:hover {
+  background: #800000;
+}
+
+.photo-carousel button.prev {
+  left: 10px;
+}
+
+.photo-carousel button.next {
+  right: 10px;
+}

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>zonas para ir</title>
+
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <link rel="stylesheet" href="/public/css/menu_jp.css" />
+    <link rel="stylesheet" href=/public/css/dedicatoria.css" />
+    <link rel="stylesheet" href="/public/css/carousel.css" />
+    <link rel="stylesheet" href="/public/css/alrededor.css" />
+    <link rel="stylesheet" href="/public/css/map.css" />
+    <link rel="icon" href="/public/img/icono.png" type="image/png" />
+
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+  </head>
+  <body>
+    <header id="menu"></header>
+
+    <!-- SECCIÓN MAPA -->
+    <section class="map-section">
+      <h1>🌍 Zonas para ir</h1>
+      <p>Haz click en el mapa, escribe un lugar y se guardará 💖</p>
+
+      <div class="map-form">
+        <input type="text" id="place-name" placeholder="Nombre del lugar" />
+        <textarea id="place-note" placeholder="Notas o recuerdos..."></textarea>
+      </div>
+
+      <div id="map"></div>
+    </section>
+
+    <footer id="footer"></footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script src="/public/js/menu.js"></script>
+    <script src="/public/js/menu_dinamico.js"></script>
+    <script src="/public/js/carousel.js"></script>
+    <script src="/public/js/musica.js"></script>
+    <script src="/public/js/map.js"></script>
+  </body>
+</html>

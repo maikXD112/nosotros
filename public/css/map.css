@@ -1,0 +1,27 @@
+.map-section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+#map {
+  width: 100%;
+  height: 400px; /* ESTO ES CLAVE */
+  border-radius: 15px;
+}
+
+.map-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.map-form input,
+.map-form textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}

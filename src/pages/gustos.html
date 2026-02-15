@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>gustos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <link rel="stylesheet" href="/public/css/menu_jp.css" />
+    <link rel="stylesheet" href="/public/css/dedicatoria.css" />
+    <link rel="stylesheet" href="/public/css/carousel.css" />
+    <link rel="stylesheet" href="/public/css/alrededor.css" />
+    <link rel="stylesheet" href="/public/css/gustos.css" />
+    <link rel="icon" href="/public/img/icono.png" type="image/png" />
+  </head>
+
+  <body>
+    <header id="menu"></header>
+
+    <section class="intro">
+      <h1>Aqui tienes tus gustos</h1>
+      <p>Aqui puedes poner si quieres algo o lo que sea. 💖</p>
+    </section>
+
+    <!-- Sección de Lista de Deseos -->
+    <section class="wishlist">
+      <h2>Lista de Deseos 💖</h2>
+      <p>
+        Aquí puedes ver algunas ideas de cosas que me puedes pedir para algun
+        futuro u algo que te gustaria tener
+      </p>
+
+      <ul>
+        <li>🌸 Flores y plantas bonitas</li>
+        <li>📚 Libros que me inspiren</li>
+        <li>🍫 Chocolates y dulces especiales</li>
+        <li>🎵 Entradas para conciertos o eventos</li>
+        <li>🖌 Material de arte o manualidades</li>
+      </ul>
+
+      <!-- ZONA PARA ESCRIBIR Y GUARDAR -->
+      <div class="write-box">
+        <h3>Escribe aquí lo que quieras 💌</h3>
+        <textarea
+          id="gustos-texto"
+          placeholder="Escribe aquí tus gustos, ideas o lo que quieras..."
+        ></textarea>
+        <p class="saved-msg" id="saved-msg">💾 Guardado automáticamente</p>
+      </div>
+    </section>
+
+    <!-- Sección de Fotos con Datos -->
+    <section class="photo-gallery">
+      <h2>Fotos y cosas 📸</h2>
+      <p>Algunas fotos que guardan momentos especiales y sus historias.</p>
+
+      <div class="photo-item">
+        <img src="/public/img/vaca.png" alt="Recuerdo 1" />
+        <div class="photo-info">
+          <h3>Tu vaca</h3>
+          <p>Tu obsesion de las vacas es impresionante pero igual te amo</p>
+        </div>
+      </div>
+
+      <div class="photo-item">
+        <img src="/public/img/enderman.png" alt="Recuerdo 2" />
+        <div class="photo-info">
+          <h3>Tu amigo el enderman</h3>
+          <p>Aqui con tu mascota el enderman jaajaja</p>
+        </div>
+      </div>
+
+      <div class="photo-item">
+        <img src="/public/img/stray-kids.jpg" alt="Recuerdo 3" />
+        <div class="photo-info">
+          <h3>Tu grupo favorito</h3>
+          <p>Aquí con tus check check check boom</p>
+          <!-- Botón de reproducir audio -->
+          <button class="play-audio-btn">🎵 Reproducir</button>
+          <audio
+            class="photo-audio"
+            src="/public/musica/Stray Kids.mp3"
+            preload="auto"
+          ></audio>
+        </div>
+      </div>
+
+      <div class="photo-item">
+        <img src="#" alt="Recuerdo 4" />
+        <div class="photo-info">
+          <h3>Cena especial</h3>
+          <p>Junio 2023 – Un momento romántico que siempre recordaré 🍽️❤️</p>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer"></footer>
+
+    <script src="/public/js/menu.js"></script>
+    <script src="/public/js/menu_dinamico.js"></script>
+    <script src="/public/js/gusto.js"></script>
+  </body>
+</html>

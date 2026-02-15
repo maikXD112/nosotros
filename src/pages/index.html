@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Nosotros</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <link rel="stylesheet" href="/public/css/menu_jp.css" />
+    <link rel="stylesheet" href="/public/css/dedicatoria.css" />
+    <link rel="stylesheet" href="/public/css/carousel.css" />
+    <link rel="stylesheet" href="/public/css/alrededor.css" />
+    <link rel="icon" href="/public/img/icono.png" type="image/png" />
+  </head>
+
+  <body>
+    <header id="menu"></header>
+
+    <section class="intro">
+      <h1>Bienvenido a Nuestro Día Especial</h1>
+      <p>Un espacio lleno de recuerdos, amor y momentos felices. 💖</p>
+    </section>
+
+    <!-- Contenedor principal con laterales -->
+    <div class="main-layout">
+      <!-- Lateral izquierdo -->
+      <aside class="side-notes left">
+        <h3>Notas Especiales</h3>
+        <ul>
+          <li>El dia que me conociste jajaja 🌸</li>
+          <li>Frases que nos hacen sonreír 😄</li>
+          <li>Locuras y estupideces que hacemos juntos 🤡</li>
+        </ul>
+      </aside>
+
+      <!-- Contenido principal -->
+      <main class="dedication-main-jp">
+        <h2>15 de Febrero</h2>
+        <p>今日は私たちの日です。愛と幸せを共に祝います。💖</p>
+        <p class="es-text">
+          Hoy es nuestro día y este es mi regalo, no es mucho pero es algo. 💖
+        </p>
+        <div class="petals-container"></div>
+      </main>
+
+      <!-- Lateral derecho -->
+      <aside class="side-notes right">
+        <h3>Datos</h3>
+        <ul>
+          <li>15/02/2025 ❤️</li>
+          <li>Fotos que nos hacen sonreír 📸</li>
+          <li>Pequeños detalles que amamos 💌</li>
+        </ul>
+      </aside>
+    </div>
+
+    <!-- Música -->
+    <div class="music-controls">
+      <audio
+        id="music"
+        src="/public/musica/yung kai - wildflower (official lyric video) [CuT0bF03mGg].mp3"
+      ></audio>
+      <div class="buttons">
+        <button id="play">▶️ Reproducir</button>
+        <button id="pause">⏸ Pausar</button>
+      </div>
+      <input type="range" id="progress" value="0" min="0" max="100" />
+      <span id="current-time">0:00</span>
+    </div>
+
+    <section class="photo-carousel">
+      <h3>Recuerdos juntos</h3>
+      <div class="carousel-container">
+        <div class="carousel-track">
+          <img src="/public/img/1.jpg" alt="Recuerdo 1" />
+          <img src="/public/img/2.jpg" alt="Recuerdo 2" />
+          <img src="/public/img/3.jpg" alt="Recuerdo 3" />
+          <img src="/public/img/4.jpg" alt="Recuerdo 4" />
+        </div>
+      </div>
+      <button class="prev">&lt;</button>
+      <button class="next">&gt;</button>
+    </section>
+
+    <footer id="footer"></footer>
+
+    <script src="/public/js/menu.js"></script>
+    <script src="/public/js/menu_dinamico.js"></script>
+    <script src="/publict/js/dedicatoria.js"></script>
+    <script src="/public/js/carousel.js"></script>
+    <script src="/public/js/musica.js"></script>
+  </body>
+</html>

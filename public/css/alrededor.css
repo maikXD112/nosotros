@@ -1,0 +1,108 @@
+/* Contenedor principal con 3 columnas */
+.main-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr 250px; /* lateral izquierdo, main flexible, lateral derecho */
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Main centrado */
+.dedication-main-jp {
+  background: #fff0f5;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Lateral (ambos lados) */
+.side-notes {
+  background: #ffe4e1;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.side-notes h3 {
+  color: #d63384;
+  margin-bottom: 1rem;
+}
+
+.side-notes ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-notes li {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+/* Responsive: en pantallas pequeñas, los laterales van arriba y abajo */
+@media screen and (max-width: 900px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .side-notes {
+    order: unset; /* opcional, para reordenar laterales */
+  }
+}
+
+/* Sección introductoria estilo japonés */
+.intro {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(160deg, #ffe4e1, #fffaf0); /* tonos sakura suaves */
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  font-family: 'Noto Sans JP', sans-serif; /* tipografía japonesa limpia */
+}
+
+/* Flores de sakura flotando (decorativo) */
+.intro::before,
+.intro::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: url('asset/img/sakura.png') no-repeat center/contain;
+  opacity: 0.3;
+}
+
+.intro::before {
+  top: -30px;
+  left: -30px;
+}
+
+.intro::after {
+  bottom: -30px;
+  right: -30px;
+}
+
+.intro h1 {
+  color: #d63384; /* rosa intenso estilo sakura */
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px #ffe4e1;
+}
+
+.intro p {
+  color: #444;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.intro-banner {
+  max-width: 80%;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s ease;
+}
+
+.intro-banner:hover {
+  transform: scale(1.05);
+}

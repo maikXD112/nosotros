@@ -1,0 +1,228 @@
+/* ============================= */
+/* ===== MENU JAPONES PREMIUM === */
+/* ============================= */
+
+#menu {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ===== HEADER JAPONES + PARALLAX ===== */
+#menu .jp-header {
+  height: 90vh;
+  background-image: url("https://images.unsplash.com/photo-1522383225653-ed111181a951");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Overlay oscuro para legibilidad solo en desktop */
+@media (min-width: 768px) {
+  #menu .jp-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+  }
+}
+
+/* Líneas estilo katana */
+#menu .jp-header::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 2px;
+  background: crimson;
+  opacity: 0.3;
+  top: 70%;
+  animation: slash 6s linear infinite;
+}
+
+@keyframes slash {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Contenido del header */
+#menu .jp-header-content {
+  text-align: center;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+/* Título */
+#menu .jp-title {
+  font-size: clamp(2rem, 6vw, 5rem);
+  letter-spacing: 6px;
+  color: #fff;
+  text-shadow: 0 0 25px crimson;
+  margin: 0;
+}
+
+/* Subtítulo */
+#menu .jp-subtitle {
+  margin: 10px 0 25px;
+  letter-spacing: 2px;
+  color: #ddd;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+/* Botón con glow */
+#menu .jp-btn {
+  padding: 10px 30px;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  background: transparent;
+  color: crimson;
+  border: 2px solid crimson;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+#menu .jp-btn:hover {
+  background: crimson;
+  color: #000;
+  box-shadow:
+    0 0 25px crimson,
+    0 0 50px crimson;
+}
+
+/* ===== NAV JAPONES ===== */
+#menu .jp-nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 15px;
+  background: linear-gradient(90deg, #111, #1a1a1a);
+  border-bottom: 2px solid crimson;
+  transition: all 0.3s ease;
+}
+
+#menu .jp-nav a {
+  position: relative;
+  color: #eee;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: color 0.3s;
+  padding: 5px 0;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+#menu .jp-nav a:hover {
+  color: crimson;
+}
+
+/* Indicador katana */
+#menu .jp-indicator {
+  position: absolute;
+  bottom: 10px;
+  height: 3px;
+  width: 0;
+  background: crimson;
+  box-shadow: 0 0 10px crimson;
+  transition: all 0.4s ease;
+}
+
+#menu .jp-nav a::after {
+  content: "•";
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: crimson;
+  opacity: 0;
+}
+
+#menu .jp-nav a:hover::after {
+  opacity: 1;
+}
+
+/* ===== NAV STICKY ===== */
+#menu .jp-nav.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  animation: slideDown 0.4s ease;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* ===== SAKURA ===== */
+#menu .sakura {
+  position: absolute;
+  top: -10px;
+  width: 14px;
+  height: 14px;
+  background: pink;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(45deg);
+  opacity: 0.8;
+  pointer-events: none;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* ===== MOBILE FIX: quitar overlay gris y parallax fijo ===== */
+@media (max-width: 767px) {
+  #menu .jp-header {
+    background-attachment: scroll;
+    background-position: top center;
+  }
+  #menu .jp-header::before {
+    display: none;
+  }
+}
+
+.jp-footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.jp-footer p {
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .jp-footer {
+    font-size: 0.8rem;
+    padding: 12px 10px;
+  }
+}
+

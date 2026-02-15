@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>San Valentín 🌸</title>
+    <link rel="icon" href="/public/img/icono.png" type="image/png" />
+    <link rel="stylesheet" href="/public/css/carta.css" />
+  </head>
+
+  <body>
+    <div class="intro" id="intro">
+      <h1>君は僕の春 🌸</h1>
+      <p>Haz clic para comenzar...</p>
+    </div>
+    <h1>🌸 ハッピーバレンタイン 🌸</h1>
+    <button onclick="abrirCarta()">Abrir carta 💌</button>
+
+    <button class="music-btn" onclick="toggleMusica()">🎵 Música ON</button>
+
+    <audio id="musica">
+      <source
+        src="/public/musica/beabadoobee - Glue Song (Official Music Video) [y1cBhJLNNXU].mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+
+    <div class="overlay" id="overlay" onclick="cerrarCarta()"></div>
+
+    <div class="carta" id="carta">
+      <h2>Para ti 💖</h2>
+      <p id="textoCarta"></p>
+
+      <div class="fotos">
+        <img src="/public/img/ss.jpg" />
+        <img src="/public/img/dd.jpg" />
+      </div>
+
+      <button onclick="cerrarCarta()">Cerrar 💗</button>
+    </div>
+
+    <div  class="videos-container" id="videosContainer">
+      <video src="/public/video/RDEM9172.MP4" muted autoplay playsinline loop></video>
+      <video src="/public/video/XBQC0341.MP4" muted autoplay playsinline loop></video>
+      <video src="/public/video/XURD8593.MP4" muted autoplay playsinline loop></video>
+    </div>
+    <script src="/public/js/carta.js"></script>
+  </body>
+</html>
