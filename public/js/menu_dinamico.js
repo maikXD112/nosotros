@@ -5,7 +5,6 @@ menu.innerHTML = `
     <div class="jp-header-content">
       <h1 class="jp-title">私たちの歴史</h1>
       <p class="jp-subtitle">Nuestra historia</p>
-      <button class="jp-btn">Explorar</button>
     </div>
   </header>
 
